@@ -9,7 +9,7 @@ Project to help analysing HDFS metadata.
 Just import URL below in your zeppelin instance and runs step-by-step:<br/>
 https://raw.githubusercontent.com/gbraccialli/HdfsUtils/master/zeppelin/hdfs-d3.json
 
-### [Live Preview here](https://www.zeppelinhub.com/viewer/notebooks/aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2dicmFjY2lhbGxpL0hkZnNVdGlscy9tYXN0ZXIvemVwcGVsaW4vbm90ZS5qc29u)
+### [Live Preview here](https://www.zeppelinhub.com/viewer/notebooks/aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2dicmFjY2lhbGxpL0hkZnNVdGlscy9tYXN0ZXIvemVwcGVsaW4vbm90ZS5qc29u)(May be removed at any time)
 
 ### 2- Build from source, running in command line and using html file
 ### Building
@@ -22,10 +22,10 @@ mvn clean package
 ```sh
 java -jar target/gbraccialli-hdfs-utils-with-dependencies.jar \
   --path=/ \
-  --maxLevelThreshold=-1  \
+  --maxLevelThreshold=1  \
   --minSizeThreshold=-1  \
   --showFiles=false   \
-  --verbose=true > out.json  
+  --verbose=false > ./html/out.json  
 ```
 ### Visualizing
 Open html/hdfs_sunburst.html in your browser and point to  .json file you created in previous step, or copy/paste json content on right load options<br/>
